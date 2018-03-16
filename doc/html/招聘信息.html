@@ -1,0 +1,415 @@
+
+
+
+
+<html>
+<head>
+  <title>都市信息网</title>
+
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body background="images/back.gif">
+    <center>
+        <table border="0" width="920" cellspacing="0" cellpadding="0" bgcolor="white">
+            <tr><td colspan="2">
+
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+  <title>页眉</title>
+</head>
+<body>
+    <center>
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+            <!-- 顶部菜单 -->
+            <tr height="20">
+                <td style="text-indent:10" valign="bottom">
+                    <a href="info_Add.action?addType=linkTo" style="color:gray">[发布信息]</a>
+                    <a href="log_isLogin.action" style="color:gray">[进入后台]</a>
+                </td>
+                <td align="right" valign="bottom">
+                    <a href="#"  style="color:gray" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://localhost:8080/CityInfo');">设为主页 -</a>
+                    <a href="javascript:window.external.AddFavorite('http://localhost:8080/CityInfo','都市供求信息网')" style="color:gray">收藏本页 -</a>
+                    <a href="mailto:123@***.com.cn" style="color:gray">联系我们</a>
+                    &nbsp;
+                </td>
+            </tr>
+            <!-- 导航菜单 -->
+            <tr height="56">
+                <td align="center" width="220" background="images/logo.gif"></td>
+                <td align="right" background="images/menu.gif">
+                    
+                    
+                    
+                        <table border="0" width="600">
+                            <tr align="center">
+                                <td width="100"><a href="goindex.action" style="color:white">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></font></td>
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=1" style="color:white">招聘信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=2" style="color:white">培训信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=3" style="color:white">房屋信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=4" style="color:white">求购信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=5" style="color:white">招商引资</a></td>
+                                    </tr><tr align="center">
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=6" style="color:white">公寓信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=7" style="color:white">求职信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=8" style="color:white">家教信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=9" style="color:white">车辆信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=10" style="color:white">出售信息</a></td>
+                                    
+                                
+                                    <td width="100"><a href="info_ListShow.action?infoType=11" style="color:white">寻找启示</a></td>
+                                    
+                                
+                            </tr>                      
+                        </table>
+                    
+                </td>
+            </tr>
+        </table>
+        <table border="0" width="100%" height="90" cellspacing="0" cellpadding="0" style="margin-top:1">
+            <tr><td align="center"><img src="images/pcard1.jpg"></td></tr>
+        </table>
+    </center>
+</body>
+</html></td></tr>
+            <tr>
+                <td width="230" valign="top" align="center">
+
+
+
+
+<html>
+<head>
+  <title>侧栏</title>
+</head>
+<body>
+    <center>
+        <table border="0" width="225" height="100%" cellspacing="0" cellpadding="0">
+            <tr height="30"><td style="text-indent:5" valign="bottom"><font color="#004790"><b>■日历</b></font></td></tr>            
+            <tr height="1"><td></td></tr>
+            <tr height="215">
+                <td valign="top" background="images/leftD.jpg">
+
+
+
+<html>
+    <head>
+      <title>简易万年历</title>
+      <link type="text/css" rel="stylesheet" href="<s2:url value='css/style.css'/>">
+      <script type="text/javascript">
+        function showTime(showWhere){
+            var now=new Date();
+	        var hour=now.getHours();
+	        var minu=now.getMinutes();
+	        var sec=now.getSeconds();
+         
+            if(hour<10) hour="0"+hour;
+         	if(minu<10) minu="0"+minu;
+         	if(sec<10) sec="0"+sec;
+         	
+         	showWhere.value=hour+":"+minu+":"+sec;
+            setTimeout("showTime(time)",1000)
+        }
+      </script>
+    </head>
+    <body onload="showTime(time)">
+        <table width="210" border="0" align="center" cellspacing="1" >            
+            <tr height="25"><td colspan="7" align="center" style="border:0 solid">2015年6月2日 星期二 <input type="text" style="border:0;background-color:#F9F9F9" disable="true" id="time" size="9"></td></tr>
+            <tr height="25" bgcolor="#F0F0F0" align="center">
+                <td style="border:1 solid">日</td>
+                <td style="border:1 solid">一</td>
+                <td style="border:1 solid">二</td>
+                <td style="border:1 solid">三</td>
+                <td style="border:1 solid">四</td>
+                <td style="border:1 solid">五</td>
+                <td style="border:1 solid">六</td>
+            </tr>
+            <tr height="4"><td colspan="7"></td></tr>
+            
+            <tr>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">1</td>
+                    
+                      <td width="30" height="23" align="center" bgcolor="gray" style="border:1 solid"><font color="#FFFFFF"><b>2</b></font></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">3</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">4</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">5</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">7</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">8</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">9</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">10</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">11</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">12</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">13</td>
+                
+            </tr>
+            
+            <tr>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">14</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">15</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">16</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">17</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">18</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">19</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">20</td>
+                
+            </tr>
+            
+            <tr>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">21</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">22</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">23</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">24</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">25</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">26</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">27</td>
+                
+            </tr>
+            
+            <tr>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">28</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">29</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid">30</td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+            </tr>
+            
+            <tr>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+                      <td width="30" height="23" align="center" style="border:1 solid"></td>
+                
+            </tr>
+            
+            <tr height="10"><td colspan="7"></td></tr>
+        </table>
+    </body>
+</html>
+</td>
+            </tr>
+            <tr height="1"><td></td></tr>
+            <tr height="30"><td style="text-indent:5" valign="bottom"><font color="#004790"><b>■信息快速搜索</b></font></td></tr>
+            <tr height="1"><td></td></tr>
+            <tr height="103">
+                <td align="center" valign="top" background="images/leftS.jpg">
+                    <table border="0" width="99%" height="100%" cellspacing="0">
+                    			
+<form id="info_SearchShow_action" name="info_SearchShow.action" onSubmit="return true;" action="/01/info_SearchShow.action" method="post">                        
+                        <tr height="10"><td colspan="3"></td></tr>
+                        <tr>
+                            <td align="right" width="70">关键字：</td>
+                            <td colspan="2" width="200"><input type="text" name="searchInfo.sqlvalue" size="21" value="" id="info_SearchShow_action_searchInfo_sqlvalue"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">条&nbsp;&nbsp;件：</td>
+                            <td>
+                                <select name="searchInfo.subsql" id="info_SearchShow_action_searchInfo_subsql">
+    <option value=""></option>
+    <option value="info_email">E-mail地址</option>
+    <option value="id">ID值</option>
+    <option value="info_content">信息内容</option>
+    <option value="info_title">信息标题</option>
+    <option value="info_linkman">联系人</option>
+    <option value="info_phone">联系电话</option>
+
+
+</select>
+                            </td>
+                            <td align="center" width="30"><input type="submit" id="info_SearchShow_action_0" value="搜索"/>
+</td>
+                        </tr>
+                        <tr>
+                            <td align="right">搜索类型：</td>
+                            <td colspan="2">
+                                <input type="radio" name="searchInfo.type" id="info_SearchShow_action_searchInfo_typeall" value="all"/><label for="info_SearchShow_action_searchInfo_typeall">全字匹配</label>
+<input type="radio" name="searchInfo.type" id="info_SearchShow_action_searchInfo_typelike" checked="checked" value="like"/><label for="info_SearchShow_action_searchInfo_typelike">模糊搜索</label>
+                                
+                            </td>
+                        </tr>
+                        <tr height="10"><td colspan="3"></td></tr>
+                    </form>
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+            <tr><td></td></tr>
+        </table>                
+    </center>
+</body>
+</html></td>
+                <td width="690" height="400" align="center" valign="top" bgcolor="#FFFFFF">
+
+
+<html>
+<head><title>查看信息列表</title></head>
+<body>
+    <center>        
+        <!-- 列表显示付费信息 -->
+                
+        <table border="0" width="670" cellspacing="0" cellpadding="0" style="margin-top:5">
+            
+            
+                <tr height="30"><td style="text-indent:5" valign="bottom"><font color="#004790"><b>■推荐招聘信息</b>『缴费专区』</font></td></tr>
+                
+                     
+                         <tr><td align="center" style="border:1 solid" bgcolor="#F0F0F0">
+                     
+                     
+                             <table border="0" width="655" cellpadding="3" style="word-break:break-all">
+                                 <tr height="30">
+                                     <td colspan="2">【招聘信息】</td>
+                                     <td align="right">发布时间：『2007-12-26 11:16:14』&nbsp;</td>
+                                 </tr>
+                                 <tr height="80"><td colspan="3">招聘信息内容</td></tr>
+                                 <tr height="30" align="center">
+                                     <td>联系电话：13255******</td>
+                                     <td>联 系 人：明明</td>
+                                     <td>E-mail：888@8*.com</td>
+                                 </tr>                                 
+                             </table>
+                         </td>
+                     </tr>
+                     <tr height="1"><td></td></tr>
+                
+            
+        </table>
+        <!-- 列表显示免费信息 -->
+        
+        <table border="0" width="670" cellspacing="0" cellpadding="0" style="margin-top:5" rules="rows">
+            
+            
+                <tr height="30"><td style="text-indent:5" valign="bottom"><font color="#004790"><b>■最新招聘信息</b>『免费专区』</font></td></tr>
+                
+                     
+                         <tr><td align="center" style="border:1 solid" bgcolor="#F0F0F0">
+                     
+                     
+                             <table border="0" width="655" cellpadding="3" style="word-break:break-all">
+                                 <tr height="30">
+                                     <td colspan="2">【招聘信息】</td>
+                                     <td align="right">发布时间：『2007-12-26 13:58:53』&nbsp;</td>
+                                 </tr>
+                                 <tr height="80"><td colspan="3">发布招聘信息标题</td></tr>
+                                 <tr height="30" align="center">
+                                     <td>联系电话：11111******</td>
+                                     <td>联系人：小免</td>
+                                     <td>E-mail：44@1*.com</td>
+                                 </tr>
+                             </table>
+                         </td>
+                     </tr>
+                     <tr height="1"><td></td></tr>
+                
+                <tr height="30"><td align="center">
+
+
+<html>
+<head><title>分页导航栏</title></head>
+<body>
+    <table border="0" width="100%" cellspacing="0">
+        <tr>
+            <td width="60%"></td>
+            <td align="center" width="40%"></td>
+        </tr>
+    </table>
+</body>
+</html></td></tr>                
+            
+        </table>
+        <br>
+    </center>
+</body>
+</html></td>
+            </tr>
+            <tr><td colspan="2">
+<html>
+<head>
+  <title>页尾</title>
+</head>
+<body>
+    <center>
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+            <tr><td align="center"><img src="images/end.jpg"></td></tr>
+        </table>        
+    </center>
+</body>
+</html></td></tr>
+        </table>        
+    </center>
+</body>
+</html>
