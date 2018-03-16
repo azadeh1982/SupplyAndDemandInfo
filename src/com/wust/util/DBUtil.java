@@ -44,8 +44,8 @@ public class DBUtil {
         try {
             // 通过驱动管理器类获取连接对象
             // URL统一资源定位符，描述数据库服务器的相关信息
-            String url = "jdbc:mysql://localhost:3306/newsdb";
-            conn = DriverManager.getConnection(url, "root", "miracles868");
+            String url = Url;
+            conn = DriverManager.getConnection(url, User, Password);
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("数据库连接失败....");
