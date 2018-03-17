@@ -13,7 +13,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <html>
 <head>
-    <base href="<%=basePath%>"/>
     <title>都市信息网-后台管理</title>
 
     <link type="text/css" rel="stylesheet" href="../css/style.css">
