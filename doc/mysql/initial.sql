@@ -11,7 +11,7 @@
  Target Server Version : 100213
  File Encoding         : 65001
 
- Date: 17/03/2018 10:18:58
+ Date: 17/03/2018 11:22:38
 */
 
 SET NAMES utf8mb4;
@@ -34,7 +34,7 @@ CREATE TABLE `tb_info` (
   `info_payfor` int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_Reference_1` (`info_type`),
-  CONSTRAINT `FK_Reference_1` FOREIGN KEY (`info_type`) REFERENCES `tb_type` (`type_id`)
+  CONSTRAINT `FK_Reference_1` FOREIGN KEY (`info_type`) REFERENCES `tb_type` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
@@ -60,9 +60,9 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_type`;
 CREATE TABLE `tb_type` (
-  `type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type_name` varchar(20) NOT NULL,
-  PRIMARY KEY (`type_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------

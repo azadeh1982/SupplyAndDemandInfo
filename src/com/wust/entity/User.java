@@ -1,4 +1,4 @@
-package com.wust.dao;
+package com.wust.entity;
 
 public class User {
     private Integer id;

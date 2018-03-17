@@ -1,15 +1,15 @@
-package com.wust.dao;
+package com.wust.entity;
 
 public class Type {
-    private Integer typeId;
+    private Integer id;
     private String typeName;
 
-    public Integer getTypeId() {
-        return typeId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTypeName() {
