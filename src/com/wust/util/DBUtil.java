@@ -7,7 +7,9 @@ import java.sql.*;
 import java.io.InputStream;
 import java.util.Properties;
 
-/** 数据库工具类 */
+/**
+ * 数据库工具类
+ */
 public class DBUtil {
     private static Connection conn = null;
     private static String Url = null;
@@ -20,7 +22,8 @@ public class DBUtil {
             InputStream inputStream = new FileInputStream(new File("src/com/wust/util/config.properties"));
             prop.load(inputStream);
             inputStream.close();
-            Url = "jdbc:mysql://"+prop.getProperty("ip")+":"+prop.getProperty("port")+"/"+prop.getProperty("database");
+            Url = "jdbc:mysql://" + prop.getProperty("ip") + ":" + prop.getProperty("port") + "/" + prop.getProperty
+                    ("database");
             User = prop.getProperty("username");
             Password = prop.getProperty("password");
         } catch (IOException e) {
@@ -59,16 +62,25 @@ public class DBUtil {
             Connection conn, Statement stmt, PreparedStatement pstmt, ResultSet rs) {
         try {
             // 释放资源
-            if (conn != null) conn.close();
-            if (stmt != null) stmt.close();
-            if (pstmt != null) pstmt.close();
-            if (rs != null) rs.close();
+            if (conn != null) {
+                conn.close();
+            }
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (pstmt != null) {
+                pstmt.close();
+            }
+            if (rs != null) {
+                rs.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        System.out.println("测试");
         System.out.println(getConnection());
         System.out.println(Url);
     }
