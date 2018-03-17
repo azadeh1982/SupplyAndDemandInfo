@@ -21,7 +21,7 @@
         </tr>
 
         <form id="admin_ListShow_action?" name="admin_ListShow.action?" onSubmit="return true;"
-              action="Admin?method=sereach" method="post">
+              action="../admin?method=sereach" method="post">
             <tr>
                 <td align="center" valign="top" style="border:1 solid">
                     <table border="0" width="220" height="150" rules="all" cellspacing="0">

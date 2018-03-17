@@ -1,9 +1,10 @@
+<%@page language="java" import="java.util.*" pageEncoding="utf-8" %>
+
 <html>
 <head>
-    <title>都市信息网</title>
-
-    <link type="text/css" rel="stylesheet" href="css/style.css">
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>都市信息网</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body background="images/back.gif">
 <center>
@@ -14,7 +15,7 @@
 
                 <html>
                 <head>
-                    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
                     <title>页眉</title>
                 </head>
                 <body>

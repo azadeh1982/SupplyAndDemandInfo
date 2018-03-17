@@ -21,7 +21,7 @@
 
                 <html>
                 <head>
-                    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
                     <title>页眉</title>
                 </head>
                 <body>
@@ -30,7 +30,7 @@
                         <!-- 顶部菜单 -->
                         <tr height="20">
                             <td style="text-indent:10" valign="bottom">
-                                <a href="publish.html" style="color:gray">[发布信息]</a>
+                                <a href="publish.jsp" style="color:gray">[发布信息]</a>
                                 <a href="admin/login.html" style="color:gray">[进入后台]</a>
                             </td>
                             <td align="right" valign="bottom">
@@ -137,7 +137,7 @@
                                 <html>
                                 <head>
                                     <title>简易万年历</title>
-                                    <link type="text/css" rel="stylesheet" href="<s2:url value='css/style.css'/>">
+                                    <link type="text/css" rel="stylesheet" href="css/style.css">
                                     <script type="text/javascript">
                                         function showTime(showWhere) {
                                             var now = new Date();

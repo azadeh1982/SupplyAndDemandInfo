@@ -20,15 +20,13 @@
     </filter-mapping>
     <!--服务器  -->
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>AdminSevrlet</servlet-name>
     <servlet-class>com.wust.servlet.AdminSevrlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>AdminSevrlet</servlet-name>
-    <url-pattern>/Admin</url-pattern>
+    <url-pattern>/admin</url-pattern>
   </servlet-mapping>
 
 </web-app>

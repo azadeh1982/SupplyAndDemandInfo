@@ -18,8 +18,11 @@ public class DBUtil {
 
     static {
         try {
+            String path = DBUtil.class.getResource("/").getPath();
+            path = path.substring(1,path.indexOf("classes"));
+            path = "/"+path + "conf/config.properties";
             Properties prop = new Properties();
-            InputStream inputStream = new FileInputStream(new File("src/com/wust/util/config.properties"));
+            InputStream inputStream = new FileInputStream(new File(path));
             prop.load(inputStream);
             inputStream.close();
             Url = "jdbc:mysql://" + prop.getProperty("ip") + ":" + prop.getProperty("port") + "/" + prop.getProperty
@@ -77,11 +80,5 @@ public class DBUtil {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println("测试");
-        System.out.println(getConnection());
-        System.out.println(Url);
     }
 }
