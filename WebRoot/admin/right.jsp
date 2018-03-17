@@ -9,7 +9,7 @@
 
 <html>
 <head><title>后台-侧栏</title></head>
-<body background="images/back.gif">
+<body background="../images/back.gif">
 <center>
     <table border="0" width="220" height="100%" cellspacing="0" cellpadding="0" style="margin-top:7">
         <!-- 显示方式 -->

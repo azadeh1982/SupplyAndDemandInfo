@@ -2,7 +2,6 @@ package com.wust.server;
 
 import java.util.ArrayList;
 
-import javax.persistence.QueryHint;
 
 import com.wust.dao.InfoDao;
 import com.wust.entity.Info;

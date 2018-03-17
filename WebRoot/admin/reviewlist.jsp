@@ -16,7 +16,7 @@
     <base href="<%=basePath%>"/>
     <title>都市信息网-后台管理</title>
 
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
 </head>
 <body>
@@ -38,22 +38,22 @@
                 <head>
                     <title>后台首页</title>
                     <!--<base href="http://localhost:8080/01/"> -->
-                    <link type="text/css" rel="stylesheet" href="css/style.css">
+                    <link type="text/css" rel="stylesheet" href="../css/style.css">
                 </head>
                 <body>
                 <center>
                     <table border="0" cellpadding="0" cellspacing="0" width="688" height="100%">
                         <tr height="20">
-                            <td><img src="images/default_t.jpg"></td>
+                            <td><img src="../images/default_t.jpg"></td>
                         </tr>
                         <tr>
-                            <td background="images/default_m.jpg" valign="top">
+                            <td background="../images/default_m.jpg" valign="top">
 
 
                                 <html>
                                 <head>
                                     <title>后台-查看信息列表</title>
-                                    <script type="text/javascript" src="js/DeleteCheck.js"></script>
+                                    <script type="text/javascript" src="../js/DeleteCheck.js"></script>
                                 </head>
                                 <body>
                                 <center>
@@ -124,7 +124,7 @@
                             </td>
                         </tr>
                         <tr height="26">
-                            <td><img src="images/default_e.jpg"></td>
+                            <td><img src="../images/default_e.jpg"></td>
                         </tr>
                     </table>
                 </center>
