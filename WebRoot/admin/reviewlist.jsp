@@ -10,12 +10,13 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <html>
 <head>
+    <base href="<%=basePath%>"/>
     <title>都市信息网-后台管理</title>
 
-    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
 </head>
 <body>
@@ -37,22 +38,22 @@
                 <head>
                     <title>后台首页</title>
                     <!--<base href="http://localhost:8080/01/"> -->
-                    <link type="text/css" rel="stylesheet" href="../css/style.css">
+                    <link type="text/css" rel="stylesheet" href="css/style.css">
                 </head>
                 <body>
                 <center>
                     <table border="0" cellpadding="0" cellspacing="0" width="688" height="100%">
                         <tr height="20">
-                            <td><img src="../images/default_t.jpg"></td>
+                            <td><img src="images/default_t.jpg"></td>
                         </tr>
                         <tr>
-                            <td background="../images/default_m.jpg" valign="top">
+                            <td background="images/default_m.jpg" valign="top">
 
 
                                 <html>
                                 <head>
                                     <title>后台-查看信息列表</title>
-                                    <script type="text/javascript" src="../js/DeleteCheck.js"></script>
+                                    <script type="text/javascript" src="js/DeleteCheck.js"></script>
                                 </head>
                                 <body>
                                 <center>
@@ -75,53 +76,23 @@
                                                         <td width="8%"><b>审核</b></td>
                                                         <td width="14%" colspan="2"><b>操作</b></td>
                                                     </tr>
-
-
-                                                    <tr height="30">
-
-                                                        <td align="center"><b>1</b></td>
-                                                        <td style="text-indent:10">135</td>
-                                                        <td style="text-indent:5"><a href="reviewinfo.jsp">测试</a></td>
-                                                        <td align="center">2015-06-01 14:19:28</td>
-                                                        <td align="center">是</td>
-                                                        <td align="center"><b><font color="blue">否</font></b></td>
-                                                        <td align="center"><a href="admin_CheckShow.action?checkID=135">√审核</a>
+                                                    <c:if test="${requestScope.msg!=null }">${requestScope.msg }</c:if>
+                                                    <c:forEach var="s" items="${requestScope.infos }" varStatus="vs">
+                                                     <tr height="30">
+                                                        <c:if test="${s!=null }">
+                                                        <td align="center"><b>${vs.count}</b></td>
+                                                        <td style="text-indent:10">${s.id }</td>
+                                                        <td style="text-indent:5"><a href="reviewinfo.jsp">${s.infoTitle }</a></td>
+                                                        <td align="center">${s.infoDate }</td>
+                                                        <td align="center">${s.infoPayfor==1?"是":"否" }</td>
+                                                        <td align="center"><b><font color="blue">${s.infoState==1?"是":"否" }</font></b></td>
+                                                        <td align="center"><a href="admin_CheckShow.action?checkID=${s.id }">√审核</a>
                                                         </td>
-                                                        <td align="center"><a href="admin_Delete.action?deleteID=135"
+                                                        <td align="center"><a href="admin_Delete.action?deleteID=${s.id }"
                                                                               onClick="return really()">×删除</a></td>
+                                                        </c:if>
                                                     </tr>
-
-
-                                                    <tr height="30" bgcolor="#F9F9F9">
-                                                        <td align="center"><b>2</b></td>
-                                                        <td style="text-indent:10">134</td>
-                                                        <td style="text-indent:5"><a href="reviewinfo.jsp">发布招聘信息标题</a>
-                                                        </td>
-                                                        <td align="center">2007-12-26 13:58:53</td>
-                                                        <td align="center">否</td>
-                                                        <td align="center"><font color="red">是</font></td>
-                                                        <td align="center"><a href="admin_CheckShow.action?checkID=134">√审核</a>
-                                                        </td>
-                                                        <td align="center"><a href="admin_Delete.action?deleteID=134"
-                                                                              onClick="return really()">×删除</a></td>
-                                                    </tr>
-
-
-                                                    <tr height="30">
-
-                                                        <td align="center"><b>3</b></td>
-                                                        <td style="text-indent:10">111</td>
-                                                        <td style="text-indent:5"><a href="reviewinfo.jsp">招聘信息标题</a>
-                                                        </td>
-                                                        <td align="center">2007-12-26 11:16:14</td>
-                                                        <td align="center">是</td>
-                                                        <td align="center"><font color="red">是</font></td>
-                                                        <td align="center"><a href="admin_CheckShow.action?checkID=111">√审核</a>
-                                                        </td>
-                                                        <td align="center"><a href="admin_Delete.action?deleteID=111"
-                                                                              onClick="return really()">×删除</a></td>
-                                                    </tr>
-
+                                                    </c:forEach>
                                                 </table>
                                             </td>
                                         </tr>
@@ -153,7 +124,7 @@
                             </td>
                         </tr>
                         <tr height="26">
-                            <td><img src="../images/default_e.jpg"></td>
+                            <td><img src="images/default_e.jpg"></td>
                         </tr>
                     </table>
                 </center>

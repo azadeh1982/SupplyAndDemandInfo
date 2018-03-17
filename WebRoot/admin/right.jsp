@@ -9,7 +9,7 @@
 
 <html>
 <head><title>后台-侧栏</title></head>
-<body background="../images/back.gif">
+<body background="images/back.gif">
 <center>
     <table border="0" width="220" height="100%" cellspacing="0" cellpadding="0" style="margin-top:7">
         <!-- 显示方式 -->
@@ -21,7 +21,7 @@
         </tr>
 
         <form id="admin_ListShow_action?" name="admin_ListShow.action?" onSubmit="return true;"
-              action="reviewlist.jsp" method="post">
+              action="Admin?method=sereach" method="post">
             <tr>
                 <td align="center" valign="top" style="border:1 solid">
                     <table border="0" width="220" height="150" rules="all" cellspacing="0">
@@ -105,7 +105,7 @@
         <tr height="1">
             <td></td>
         </tr>
-        <form action="payinfo.jsp">
+        <form action="Admin?method=sereachById" method="post">
             <tr>
                 <td align="center" valign="top" style="border:1 solid">
                     <table border="0" width="220" height="80" cellspacing="0" rules="none">
@@ -139,7 +139,7 @@
                 <html>
                 <head>
                     <title>简易万年历</title>
-                    <link type="text/css" rel="stylesheet" href="../css/style.css">
+                    <link type="text/css" rel="stylesheet" href="css/style.css">
                     <script type="text/javascript">
                         function showTime(showWhere) {
                             var now = new Date();
