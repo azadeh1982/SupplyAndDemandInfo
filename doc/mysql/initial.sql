@@ -11,7 +11,7 @@
  Target Server Version : 100213
  File Encoding         : 65001
 
- Date: 17/03/2018 08:20:24
+ Date: 17/03/2018 10:18:58
 */
 
 SET NAMES utf8mb4;
@@ -30,8 +30,8 @@ CREATE TABLE `tb_info` (
   `info_phone` varchar(50) NOT NULL,
   `info_email` varchar(100) NOT NULL,
   `info_date` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `info_state` varchar(1) DEFAULT '0',
-  `info_payfor` varchar(1) DEFAULT '0',
+  `info_state` int(1) NOT NULL DEFAULT 0,
+  `info_payfor` int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_Reference_1` (`info_type`),
   CONSTRAINT `FK_Reference_1` FOREIGN KEY (`info_type`) REFERENCES `tb_type` (`type_id`)
@@ -41,18 +41,18 @@ CREATE TABLE `tb_info` (
 -- Records of tb_info
 -- ----------------------------
 BEGIN;
-INSERT INTO `tb_info` VALUES (2, 1, '招聘信息标题', '招聘信息内容', '明明', '13255768888', '88888@qq.com', '2018-03-17 08:12:09', '0', '0');
-INSERT INTO `tb_info` VALUES (3, 2, '培训信息标题', '培训信息内容', '明明', '13255768888', '88888@qq.com', '2018-03-17 08:12:58', '1', '0');
-INSERT INTO `tb_info` VALUES (4, 3, '房屋信息标题', '房屋信息内容', '明明', '13255768888', '88888@qq.com', '2018-03-17 08:13:32', '0', '1');
-INSERT INTO `tb_info` VALUES (5, 4, '求购信息标题', '求购信息内容', '芳芳', '13266758888', '88668@qq.com', '2018-03-17 08:14:18', '1', '1');
-INSERT INTO `tb_info` VALUES (6, 5, '招商引资标题', '招商引资内容', '芳芳', '13266758888', '88668@qq.com', '2018-03-17 08:14:53', '0', '0');
-INSERT INTO `tb_info` VALUES (7, 6, '公寓信息标题', '公寓信息内容', '芳芳', '13266758888', '88668@qq.com', '2018-03-17 08:15:26', '1', '0');
-INSERT INTO `tb_info` VALUES (8, 7, '求职信息标题', '求职信息内容', '芳芳', '15671562980', '123765@qq.com', '2018-03-17 08:16:06', '1', '1');
-INSERT INTO `tb_info` VALUES (9, 8, '家教信息标题', '家教信息内容', '小兔', '13423442233', '9984399024@qq.com', '2018-03-17 08:16:52', '0', '1');
-INSERT INTO `tb_info` VALUES (10, 9, '车辆信息标题', '车辆信息内容', '小小', '15682939238', '92932079@qq.com', '2018-03-17 08:17:37', '0', '0');
-INSERT INTO `tb_info` VALUES (11, 10, '出售信息标题', '出售信息内容', '喇喇', '17893232383', '769876798@qq.com', '2018-03-17 08:18:13', '0', '0');
-INSERT INTO `tb_info` VALUES (12, 1, '发布招聘信息', '发布房屋信息内容', '小哈', '15300483844', '48583993@qq.com', '2018-03-17 08:18:54', '0', '0');
-INSERT INTO `tb_info` VALUES (13, 3, '发布房屋信息', '发布房屋信息内容', '小牛', '88888888888', '3462387932@qq.com', '2018-03-17 08:19:33', '1', '1');
+INSERT INTO `tb_info` VALUES (2, 1, '招聘信息标题', '招聘信息内容', '明明', '13255768888', '88888@qq.com', '2018-03-17 08:12:09', 0, 0);
+INSERT INTO `tb_info` VALUES (3, 2, '培训信息标题', '培训信息内容', '明明', '13255768888', '88888@qq.com', '2018-03-17 08:12:58', 1, 0);
+INSERT INTO `tb_info` VALUES (4, 3, '房屋信息标题', '房屋信息内容', '明明', '13255768888', '88888@qq.com', '2018-03-17 08:13:32', 0, 1);
+INSERT INTO `tb_info` VALUES (5, 4, '求购信息标题', '求购信息内容', '芳芳', '13266758888', '88668@qq.com', '2018-03-17 08:14:18', 1, 1);
+INSERT INTO `tb_info` VALUES (6, 5, '招商引资标题', '招商引资内容', '芳芳', '13266758888', '88668@qq.com', '2018-03-17 08:14:53', 0, 0);
+INSERT INTO `tb_info` VALUES (7, 6, '公寓信息标题', '公寓信息内容', '芳芳', '13266758888', '88668@qq.com', '2018-03-17 08:15:26', 1, 0);
+INSERT INTO `tb_info` VALUES (8, 7, '求职信息标题', '求职信息内容', '芳芳', '15671562980', '123765@qq.com', '2018-03-17 08:16:06', 1, 1);
+INSERT INTO `tb_info` VALUES (9, 8, '家教信息标题', '家教信息内容', '小兔', '13423442233', '9984399024@qq.com', '2018-03-17 08:16:52', 0, 1);
+INSERT INTO `tb_info` VALUES (10, 9, '车辆信息标题', '车辆信息内容', '小小', '15682939238', '92932079@qq.com', '2018-03-17 08:17:37', 0, 0);
+INSERT INTO `tb_info` VALUES (11, 10, '出售信息标题', '出售信息内容', '喇喇', '17893232383', '769876798@qq.com', '2018-03-17 08:18:13', 0, 0);
+INSERT INTO `tb_info` VALUES (12, 1, '发布招聘信息', '发布房屋信息内容', '小哈', '15300483844', '48583993@qq.com', '2018-03-17 08:18:54', 0, 0);
+INSERT INTO `tb_info` VALUES (13, 3, '发布房屋信息', '发布房屋信息内容', '小牛', '88888888888', '3462387932@qq.com', '2018-03-17 08:19:33', 1, 1);
 COMMIT;
 
 -- ----------------------------
